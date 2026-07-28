@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ALLSTAR UNITED MEMORIES</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: white;
+}
+
+header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+
+    background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.9)),
+        url("images/cover.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero {
+    max-width: 850px;
+}
+
+.logo {
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: #e50914;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 10vw, 90px);
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: #e50914;
+}
+
+.hero p {
+    margin-top: 25px;
+    color: #ccc;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 28px;
+    border: 1px solid #e50914;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.btn:hover {
+    background: #e50914;
+}
+
+</style>
+</head>
+
+<body>
+
+<header id="home">
+
+    <div class="hero">
+
+        <div class="logo">
+            ALLSTAR UNITED ESPORTS
+        </div>
+
+        <h1>
+            OUR <span>MEMORIES</span>
+        </h1>
+
+        <p>
+            Một nơi dành riêng để lưu giữ những con người,
+            những trận đấu và những khoảnh khắc
+            mà ALLSTAR UNITED sẽ không bao giờ quên.
+        </p>
+
+        <a href="#memories" class="btn">
+            BẮT ĐẦU HÀNH TRÌNH ↓
+        </a>
+
+    </div>
+
+</header>
+<nav>
+
+    <a href="#home">TRANG CHỦ</a>
+    <a href="#memories">KỶ NIỆM</a>
+    <a href="#players">THÀNH VIÊN</a>
+    <a href="#timeline">HÀNH TRÌNH</a>
+    <a href="#love">❤️ FAN</a>
+
+</nav>
+
+
+<section id="memories">
+
+    <div class="title">
+
+        <small>MEMORIES</small>
+
+        <h2>NHỮNG KỶ NIỆM</h2>
+
+        <p>
+            Những khoảnh khắc đã trở thành một phần của ALLSTAR UNITED
+        </p>
+
+    </div>
+
+
+    <div class="memories">
+
+        <div class="memory">
+
+            <img src="images/memory1.jpg">
+
+            <div class="memory-content">
+
+                <h3>Ngày chúng ta bắt đầu</h3>
+
+                <p>
+                    Một khởi đầu nhỏ cho một hành trình lớn.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="images/memory2.jpg">
+
+            <div class="memory-content">
+
+                <h3>Những người đồng đội</h3>
+
+                <p>
+                    Cùng nhau chiến đấu, cùng nhau trưởng thành.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="images/memory3.jpg">
+
+            <div class="memory-content">
+
+                <h3>Những trận chiến</h3>
+
+                <p>
+                    Có chiến thắng, có thất bại,
+                    nhưng chưa từng bỏ cuộc.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <img src="images/memory4.jpg">
+
+            <div class="memory-content">
+
+                <h3>Một khoảnh khắc đáng nhớ</h3>
+
+                <p>
+                    Một khoảnh khắc có thể chỉ vài giây,
+                    nhưng ký ức thì ở lại rất lâu.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+  <!-- ================= THÀNH VIÊN ================= -->
+
+<style>
+
+#players {
+    padding: 80px 6%;
+    background: #0b0b0b;
+}
+
+#players .title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+#players .title small {
+    color: #e50914;
+    letter-spacing: 3px;
+}
+
+#players .title h2 {
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+#players .title p {
+    color: #777;
+    margin-top: 10px;
+}
+
+.players {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.player {
+    background: #111;
+    border: 1px solid #242424;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: .3s;
+}
+
+.player:hover {
+    transform: translateY(-8px);
+    border-color: #e50914;
+    box-shadow: 0 10px 30px rgba(229,9,20,.2);
+}
+
+.player img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.player h3 {
+    padding: 15px 5px 5px;
+    font-size: 20px;
+}
+
+.player p {
+    padding-bottom: 18px;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* Điện thoại */
+
+@media(max-width:700px) {
+
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .player img {
+        height: 210px;
+    }
+
+}
+
+</style>
+
+
+<section id="players">
+
+    <div class="title">
+
+        <small>THE PEOPLE</small>
+
+        <h2>NHỮNG NGƯỜI ĐÃ TẠO NÊN KỶ NIỆM</h2>
+
+        <p>
+            Những cái tên đã trở thành một phần
+            của hành trình ALLSTAR UNITED
+        </p>
+
+    </div>
+
+
+    <div class="players">
+
+
+        <!-- PER -->
+
+        <div class="player">
+
+            <img src="images/PER.jpg" alt="PER">
+
+            <h3>PER</h3>
+
+            <p>ALLSTAR UNITED</p>
+
+        </div>
+
+
+        <!-- KEN -->
+
+        <div class="player">
+
+            <img src="images/KEN.jpg" alt="KEN">
+
+            <h3>KEN</h3>
+
+            <p>ALLSTAR UNITED</p>
+
+        </div>
+
+
+        <!-- MANJIRO -->
+
+        <div class="player">
+
+            <img src="images/MANJIRO.jpg" alt="MANJIRO">
+
+            <h3>MANJIRO</h3>
+
+            <p>ALLSTAR UNITED</p>
+
+        </div>
+
+
+        <!-- HZE -->
+
+        <div class="player">
+
+            <img src="images/HZE.jpg" alt="HZE">
+
+            <h3>HZE</h3>
+
+            <p>ALLSTAR UNITED</p>
+
+        </div>
+
+
+        <!-- NOTAR7 -->
+
+        <div class="player">
+
+            <img src="images/NOTAR7.jpg" alt="NOTAR7">
+
+            <h3>NOTAR7</h3>
+
+            <p>ALLSTAR UNITED</p>
+
+        </div>
+
+
+        <!-- TIN -->
+
+        <div class="player">
+
+            <img src="images/TIN.jpg" alt="TIN">
+
+            <h3>TIN</h3>
+
+            <p>ALLSTAR UNITED</p>
+
+        </div>
+
+
+    </div>
+
+</section>
+  <!-- ================= DÒNG THỜI GIAN ================= -->
+
+<style>
+
+#timeline {
+    padding: 80px 6%;
+    background: #080808;
+}
+
+#timeline .title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+#timeline .title small {
+    color: #e50914;
+    letter-spacing: 3px;
+}
+
+#timeline .title h2 {
+    font-size: 38px;
+    margin-top: 10px;
+}
+
+#timeline .title p {
+    color: #777;
+    margin-top: 10px;
+}
+
+
+/* Timeline */
+
+.timeline {
+    max-width: 850px;
+    margin: auto;
+    position: relative;
+}
+
+
+/* Đường đỏ ở giữa */
+
+.timeline::before {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+
+    background: #e50914;
+
+    transform: translateX(-50%);
+}
+
+
+/* Từng kỷ niệm */
+
+.event {
+    width: 50%;
+    padding: 20px 40px;
+    position: relative;
+}
+
+
+/* Chấm đỏ */
+
+.event::before {
+    content: "";
+
+    position: absolute;
+
+    top: 25px;
+
+    width: 15px;
+    height: 15px;
+
+    background: #e50914;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 15px #e50914;
+}
+
+
+/* Bên trái */
+
+.event:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.event:nth-child(odd)::before {
+    right: -8px;
+}
+
+
+/* Bên phải */
+
+.event:nth-child(even) {
+    left: 50%;
+}
+
+.event:nth-child(even)::before {
+    left: -7px;
+}
+
+
+/* Nội dung */
+
+.event-box {
+    background: #111;
+
+    border: 1px solid #242424;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    transition: .3s;
+}
+
+.event-box:hover {
+    border-color: #e50914;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px rgba(229,9,20,.15);
+}
+
+.event-year {
+    color: #e50914;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.event-box h3 {
+    margin: 8px 0;
+
+    font-size: 20px;
+}
+
+.event-box p {
+    color: #888;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* Điện thoại */
+
+@media(max-width:700px) {
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .event {
+        width: 100%;
+
+        left: 0 !important;
+
+        text-align: left !important;
+
+        padding-left: 40px;
+
+        padding-right: 0;
+
+        margin-bottom: 20px;
+    }
+
+    .event::before {
+        left: 3px !important;
+        right: auto !important;
+    }
+
+}
+
+</style>
+
+
+<section id="timeline">
+
+    <div class="title">
+
+        <small>OUR JOURNEY</small>
+
+        <h2>DÒNG THỜI GIAN</h2>
+
+        <p>
+            Những chương ký ức của ALLSTAR UNITED
+        </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <!-- KỶ NIỆM 1 -->
+
+        <div class="event">
+
+            <div class="event-box">
+
+                <div class="event-year">
+                    2026
+                </div>
+
+                <h3>Ngày chúng ta bắt đầu</h3>
+
+                <p>
+                    Một tập thể được hình thành
+                    từ những người có chung niềm đam mê
+                    với Free Fire Esports.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- KỶ NIỆM 2 -->
+
+        <div class="event">
+
+            <div class="event-box">
+
+                <div class="event-year">
+                    2026
+                </div>
+
+                <h3>Trận đấu đầu tiên</h3>
+
+                <p>
+                    Lần đầu tiên cùng nhau bước vào
+                    một trận chiến với tư cách
+                    ALLSTAR UNITED.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- KỶ NIỆM 3 -->
+
+        <div class="event">
+
+            <div class="event-box">
+
+                <div class="event-year">
+                    2026
+                </div>
+
+                <h3>Những ngày tháng đáng nhớ</h3>
+
+                <p>
+                    Có những trận thắng khiến chúng ta
+                    vui mừng, cũng có những thất bại
+                    khiến chúng ta trưởng thành.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- KỶ NIỆM 4 -->
+
+        <div class="event">
+
+            <div class="event-box">
+
+                <div class="event-year">
+                    2026 → ∞
+                </div>
+
+                <h3>Câu chuyện vẫn chưa kết thúc</h3>
+
+                <p>
+                    Đây chỉ là một chương trong hành trình.
+                    Những kỷ niệm mới vẫn đang được viết.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+  <!-- ================= GÓC FAN ================= -->
+
+<style>
+
+#love {
+    padding: 90px 6%;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, #260000 0%, #080808 55%);
+}
+
+#love .fan-title {
+    max-width: 700px;
+    margin: auto;
+}
+
+#love small {
+    color: #e50914;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+#love h2 {
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+#love p {
+    color: #888;
+    line-height: 1.7;
+}
+
+.love-button {
+    margin-top: 30px;
+    padding: 15px 30px;
+
+    background: transparent;
+    border: 1px solid #e50914;
+    border-radius: 50px;
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.love-button:hover {
+    background: #e50914;
+    box-shadow: 0 0 30px rgba(229,9,20,.4);
+}
+
+#love-count {
+    margin-top: 18px;
+    color: #777;
+}
+
+
+/* TIM BAY */
+
+.flying-heart {
+    position: fixed;
+    bottom: 30px;
+
+    font-size: 25px;
+
+    pointer-events: none;
+    z-index: 9999;
+
+    animation: heartFly 2.5s ease-out forwards;
+}
+
+@keyframes heartFly {
+
+    0% {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(.7)
+            rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translateY(-600px)
+            scale(1.7)
+            rotate(25deg);
+    }
+
+}
+
+@media(max-width:600px) {
+
+    #love h2 {
+        font-size: 30px;
+    }
+
+}
+
+</style>
+
+
+<section id="love">
+
+    <div class="fan-title">
+
+        <small>FOR THE FANS</small>
+
+        <h2>
+            MÀY ĐÃ ĐỒNG HÀNH CÙNG ASU TỪ KHI NÀO?
+        </h2>
+
+        <p>
+            Mỗi người có một câu chuyện khác nhau.
+            Nhưng tất cả chúng ta đều có chung một nơi
+            để lưu giữ những kỷ niệm.
+        </p>
+
+        <button class="love-button" onclick="sendLove()">
+            ❤️ GỬI MỘT TRÁI TIM
+        </button>
+
+        <div id="love-count">
+            0 trái tim đã được gửi ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+let loveCount = 0;
+
+function sendLove() {
+
+    loveCount++;
+
+    document.getElementById("love-count").innerText =
+        loveCount + " trái tim đã được gửi ❤️";
+
+
+    // Tạo nhiều trái tim bay
+
+    for (let i = 0; i < 8; i++) {
+
+        const heart =
+            document.createElement("div");
+
+        heart.className = "flying-heart";
+
+        const hearts = [
+            "❤️",
+            "🤍",
+            "❤️‍🔥",
+            "⭐"
+        ];
+
+        heart.innerText =
+            hearts[Math.floor(Math.random() * hearts.length)];
+
+
+        heart.style.left =
+            Math.random() * 100 + "vw";
+
+
+        heart.style.animationDuration =
+            (1.5 + Math.random() * 1.5) + "s";
+
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(() => {
+
+            heart.remove();
+
+        }, 3000);
+
+    }
+
+}
+
+</script>
+  <!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>ALLSTAR UNITED MEMORIES</h3>
+
+    <p>
+        Những kỷ niệm có thể cũ đi,
+        nhưng những người từng đồng hành sẽ luôn được nhớ đến.
+    </p>
+
+    <div class="footer-line"></div>
+
+    <p class="copyright">
+        © 2026 ALLSTAR UNITED ESPORTS
+        <br>
+        Fan-made Memory Page ❤️
+    </p>
+
+</footer>
+
+
+<style>
+
+footer {
+    padding: 60px 20px;
+    text-align: center;
+    background: #050505;
+    border-top: 1px solid #222;
+}
+
+footer h3 {
+    font-size: 22px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+footer p {
+    max-width: 600px;
+    margin: 15px auto;
+    color: #777;
+    line-height: 1.7;
+}
+
+.footer-line {
+    width: 50px;
+    height: 2px;
+    background: #e50914;
+    margin: 25px auto;
+}
+
+footer .copyright {
+    font-size: 12px;
+    color: #555;
+}
+
+</style>
+
+
+</body>
+</html>
+  
