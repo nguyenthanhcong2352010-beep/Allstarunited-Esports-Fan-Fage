@@ -344,82 +344,94 @@ header {
         <!-- PER -->
 
         <div class="player">
+    <img src="PER.jpg" onclick="showPlayer(
+        'ASU.PER',
+        'NGUYỄN CÔNG LÝ',
+        '29/12/2007',
+        'RUSHER',
+        'ALLSTAR UNITED ESPORTS'
+    )">
 
-            <img src="PER.jpg">
-
-            <h3>PER</h3>
-
-            <p>ALLSTAR UNITED</p>
-
+    <h3>ASU.PER</h3>
+    <p>ALLSTAR UNITED</p>
         </div>
 
 
         <!-- KEN -->
 
         <div class="player">
+    <img src="KEN.jpg" onclick="showPlayer(
+        'ASU.KEN',
+        'TRẦN NGUYỄN GIA NGUYÊN',
+        '02/10/2011',
+        'SUPPORT',
+        'ALLSTAR UNITED ESPORTS'
+    )">
 
-            <img src="KEN.jpg">
-
-            <h3>KEN</h3>
-
-            <p>ALLSTAR UNITED</p>
-
+    <h3>ASU.KEN</h3>
+    <p>ALLSTAR UNITED</p>
         </div>
 
 
         <!-- MANJIRO -->
+<div class="player">
+    <img src="MANJIRO.jpg" onclick="showPlayer(
+        'ASU.MANJIRO',
+        'NGUYỄN THÀNH DANH',
+        '16/10/2011',
+        'SUPPORT',
+        'ALLSTAR UNITED ESPORTS'
+    )">
 
-        <div class="player">
-
-            <img src="MANJIRO.jpg">
-
-            <h3>MANJIRO</h3>
-
-            <p>ALLSTAR UNITED</p>
-
-        </div>
-
+    <h3>ASU.MANJIRO</h3>
+    <p>ALLSTAR UNITED</p>
+</div>
 
         <!-- HZE -->
 
-        <div class="player">
+<div class="player">
+    <img src="HZE.jpg" onclick="showPlayer(
+        'ASU.HZE',
+        'PHAN NGUYỄN ANH KHOA',
+        '28/06/2011',
+        'BOMMER',
+        'ALLSTAR UNITED ESPORTS'
+    )">
 
-            <img src="HZE.jpg">
-
-            <h3>ASUTC2026</h3>
-
-            <p>ALLSTAR UNITED</p>
-
-        </div>
+    <h3>ASU.HZE</h3>
+    <p>ALLSTAR UNITED</p>
+</div>
 
 
         <!-- NOTAR7 -->
 
         <div class="player">
+    <img src="NOTAR7.jpg" onclick="showPlayer(
+        'ASU.NOTAR7',
+        'NGUYỄN THÀNH CÔNG',
+        '23/05/2011',
+        'BOMMER',
+        'ALLSTAR UNITED ESPORTS'
+    )">
 
-            <img src="NOTAR7.jpg">
-
-            <h3>NOTAR7</h3>
-
-            <p>ALLSTAR UNITED</p>
-
+    <h3>ASU.NOTAR7</h3>
+    <p>ALLSTAR UNITED</p>
         </div>
 
+        <!-- TIN -->
 
-        <!-- ASUTC2026-->
+      <div class="player">
+    <img src="TIN.jpg" onclick="showPlayer(
+        'ASU.TIN',
+        'PHẠM DUY HÙNG',
+        'Chưa cập nhật',
+        'SNIPER',
+        'ALLSTAR UNITED ESPORTS'
+    )">
 
-        <div class="player">
-
-            <img src="ASUTC2026.jpg">
-
-            <h3>HZE</h3>
-
-            <p>ALLSTAR UNITED</p>
-
-        </div>
-
-
-    </div>
+    <h3>ASU.TIN</h3>
+    <p>ALLSTAR UNITED</p>
+      </div>
 
 </section>
   <!-- ================= DÒNG THỜI GIAN ================= -->
@@ -932,6 +944,42 @@ function sendLove() {
 
 
 <style>
+    .popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.75);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-content{
+    background:#111;
+    color:#fff;
+    width:350px;
+    padding:25px;
+    border-radius:15px;
+    border:2px solid #e50914;
+}
+
+.popup-content h2{
+    color:#e50914;
+    margin-bottom:15px;
+}
+
+.popup-content p{
+    margin:10px 0;
+}
+
+.close{
+    float:right;
+    font-size:30px;
+    cursor:pointer;
+}
 
 footer {
     padding: 60px 20px;
@@ -966,7 +1014,36 @@ footer .copyright {
 }
 
 </style>
+    
+<div id="playerPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePlayer()">&times;</span>
 
+        <h2 id="pName"></h2>
+
+        <p><b>TÊN THẬT:</b> <span id="pReal"></span></p>
+        <p><b>NĂM SINH:</b> <span id="pBirth"></span></p>
+        <p><b>ROLE:</b> <span id="pRole"></span></p>
+        <p><b>TEAM:</b> <span id="pTeam"></span></p>
+    </div>
+
+    <script>
+function showPlayer(name, real, birth, role, team){
+
+    document.getElementById("pName").innerText = name;
+    document.getElementById("pReal").innerText = real;
+    document.getElementById("pBirth").innerText = birth;
+    document.getElementById("pRole").innerText = role;
+    document.getElementById("pTeam").innerText = team;
+
+    document.getElementById("playerPopup").style.display = "flex";
+}
+
+function closePlayer(){
+    document.getElementById("playerPopup").style.display = "none";
+}
+    </script>
+    
 
 </body>
 </html>
