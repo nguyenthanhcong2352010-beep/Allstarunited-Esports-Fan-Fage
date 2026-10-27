@@ -106,9 +106,41 @@ header {
 </style>
 </head>
 
+<script src="https://unpkg.com/globe.gl"></script>
+<script>
+(function () {
+    const container = document.getElementById("globe");
+    if (!container || typeof Globe === "undefined") return;
+
+    const earth = Globe()(container)
+        .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg")
+        .backgroundColor("rgba(0,0,0,0)")
+        .showAtmosphere(true)
+        .atmosphereColor("#4c9bff")
+        .atmosphereAltitude(0.15);
+
+    function resizeEarth() {
+        earth.width(container.clientWidth);
+        earth.height(container.clientHeight);
+    }
+
+    resizeEarth();
+    earth.pointOfView({ lat: 15, lng: 105, altitude: 2.2 }, 0);
+    earth.controls().autoRotate = true;
+    earth.controls().autoRotateSpeed = 0.3;
+    earth.controls().enableZoom = false;
+    earth.controls().enablePan = false;
+
+    window.addEventListener("resize", resizeEarth);
+})();
+</script>
+
 <body>
 
 <header id="home">
+    
+<div id="globe"></div>
+
 
     <div class="hero">
 
